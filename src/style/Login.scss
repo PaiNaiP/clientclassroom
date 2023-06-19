@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+$main: #AEB5C8;
+$select: #E2E4EB;
+$footer: #F4F5F7;
+$icon: #6D6875;
+$backicon: #E9EBF0;
+$button: #335DFF;
+$mainfont: 'Cabin', sans-serif;
+$subfont: 'Source Sans Pro', sans-serif;
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+body::-webkit-scrollbar {
+    width: 8px;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background: $select;
+    border-radius: 10px;
+}
+  
+body::-webkit-scrollbar-thumb:hover {
+    background: $main;
+}
+@media screen and (max-width:1507px){
+    .cont-welcome-image{
+        display: none;
+    }
+    .cont-auth-form{
+        width: 100% !important;
+    }
+    .btn-cont{
+        button{
+            width: 47% !important;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width:280px){
+    .cont-welcome-image{
+        display: none;
+    }
+    .cont-auth-form{
+        width: 100% !important;
+    }
+    .btn-cont{
+        button{
+            width: 62% !important;
+            text-align: center;
+        }
+    }
+}
+
+.login-bod{
+    width: 100%;
+    display: flex;
+    p{
+        font-family: $subfont;
+        margin-bottom: -0px;
+        font-family: 400;
+        text-align: left;
+    }
+    .inputlog{
+        border: 1px solid rgba(174, 181, 200, 0.45);
+        border-radius: 10px;    
+        height: 40px;
+        padding-left: 15px;
+        font-family: $subfont;
+        font-weight: 400;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .continput{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    input:focus{
+        outline: none;
+    }
+
+    h1{
+        font-family: $mainfont;
+    }
+
+}
+.cont-welcome-image{
+    width: 60%;
+}
+
+.welcome-img{
+    object-fit:cover;
+    width: 100%;
+}
+
+.cont-auth-form{
+    width: 40%;
+    display: flex;
+}
+
+.cnt-aut{
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 150px;
+}
+
+.change-password{
+    display: flex;
+    font-family: $subfont;
+    margin: 0 auto;
+    width: 60%;
+    a{
+        color: $button;
+        text-decoration: none;
+        margin-top: 16px;
+        font-weight: 600;
+        margin-left: 2px;
+    }
+}
+
+.btn-cont{
+    margin-top: 13px;
+    button{
+        margin-left: 5px;
+        padding: 10px;
+        width: 35%;
+        margin-top: 10px;
+        color: white;
+        font-family: $subfont;
+        font-weight: 600;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+    .btn-auth{
+        button{
+            background: $button;
+            border: none;            
+        }
+    }
+
+    .btn-auth:active{
+        button{
+            background: #526adf;
+            border: none;            
+        }
+    }
+
+    .btn-reg{
+        button{
+            background: $main;
+            border: none;            
+        }
+    }
+
+    .btn-reg:active{
+        button{
+            background: #9f9da3;
+            border: none;            
+        }
+    }
+    
+}

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+$main: #AEB5C8;
+$select: #E2E4EB;
+$footer: #F4F5F7;
+$icon: #6D6875;
+$backicon: #E9EBF0;
+$button: #335DFF;
+$mainfont: 'Cabin', sans-serif;
+$subfont: 'Source Sans Pro', sans-serif;
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -320px; // начальное положение
+    width: 320px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    transition: left 0.3s ease-in-out;
+  
+    &.open {
+      left: 0; // положение после открытия
+    }
+  
+    &.closing {
+      left: -320px; // положение после закрытия
+    }
+  
+    .sidebar-content {
+      height: 100%;
+      padding: 20px;
+      overflow-y: auto;
+      font-family: $subfont;
+      .home-cont{
+        display: flex;
+        font-size: 20px;
+        color: $icon;
+        border-bottom: 1px solid #000;
+        p{
+            color: $icon;
+        }
+        &:hover{
+            background-color: #E2E4EB;
+        }
+    }
+        p{
+          text-align: center;
+            color: $main;
+            font-family: $subfont;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        .archive-cont{
+            display: flex;
+            font-size: 20px;
+            color: $icon;
+            border-top: 1px solid #000;
+            &:hover{
+                background-color: #E2E4EB;
+            }
+            p{
+                color: $icon;
+            }
+            }
+        .not-found{
+            padding-bottom: 7rem;
+        }
+    }
+  
+    .sidebar-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0;
+  
+      &.open {
+        opacity: 1;
+        z-index: 5;
+      }
+    }
+  }
+  
+.course-card-small{
+  padding: 10px;
+  padding-bottom: 0;
+  text-decoration: none;
+  &:hover{
+    background-color: $select;
+  }
+  &__body{
+    display: flex;
+    &__avatar{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      text-align: center;
+      p{
+        font-size: 20px !important;
+        font-family: $subfont !important;
+        margin-top: 10px;
+      }
+    }
+    &__info{
+      font-family: $subfont !important;
+      margin-top: -15px;
+      h1{
+        font-size: 20px;
+        font-weight: 700;
+        margin-left: 15px;
+        color: #000;
+      }
+      p{
+        color: $icon !important;
+        font-weight: 500 !important;
+        margin-top: -10px;
+        padding-left: 0 !important;
+        font-size: 16px !important;
+      }
+    }
+  }
+}
