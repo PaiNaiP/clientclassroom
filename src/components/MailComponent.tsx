@@ -8,7 +8,7 @@ import checkFileAvailability from '../middleware/image'
 import { BiSend } from 'react-icons/bi'
 import { io, Socket } from 'socket.io-client';
 
-const socket: Socket = io('http://localhost:5000');
+const socket: Socket = io(API_URL);
 
 const MailComponent = () => {
     const [loading, setLoading] = useState<boolean>(true)

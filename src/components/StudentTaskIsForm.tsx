@@ -18,7 +18,7 @@ import ModalCreateTask from './ModalCreateTask'
 import ModalAddToTheme from './ModalAddToTheme'
 import { io, Socket } from 'socket.io-client';
 
-const socket: Socket = io('http://localhost:5000');
+const socket: Socket = io(API_URL);
 
 const StudentTaskIsForm = () => {
     const [openModalFile, setOpenModalFile] = useState(false)
